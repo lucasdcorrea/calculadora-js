@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="../EVENTOS DOM/STYLES.CSS">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="display">
+                <span class="current">0</span>
+            </div>
+            <table class="buttons">
+                <tr>
+                    <td><button class="clear">C</button></td>
+                    <td><button class="number" data-num="7">7</button></td>
+                    <td><button class="number" data-num="8">8</button></td>
+                    <td><button class="number" data-num="9">9</button></td>
+                    <td><button class="operator" data-op="divide">÷</button></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button class="number" data-num="4">4</button></td>
+                    <td><button class="number" data-num="5">5</button></td>
+                    <td><button class="number" data-num="6">6</button></td>
+                    <td><button class="operator" data-op="multiply">×</button></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button class="number" data-num="1">1</button></td>
+                    <td><button class="number" data-num="2">2</button></td>
+                    <td><button class="number" data-num="3">3</button></td>
+                    <td><button class="operator" data-op="subtract">-</button></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button class="number" data-num="0">0</button></td>
+                    <td><button class="decimal">.</button></td>
+                    <td><button class="equals">=</button></td>
+                    <td><button class="operator" data-op="add">+</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="history">
+            <h2>Histórico</h2>
+            <ul class="history-list"></ul>
+        </div>
+    </div>
+    <footer>
+        2023 &copy; Lucas Daniel Correa de Souza, N° 16, Técnico de Informática, CEEP Pedro Boaretto Neto. Cascavel-PR
+    </footer>
+    <script src="../EVENTOS DOM/SCRIPT.JS"></script>
+</body>
+</html>
