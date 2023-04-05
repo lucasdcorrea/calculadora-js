@@ -5,52 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
     <link rel="stylesheet" href="../EVENTOS DOM/STYLES.CSS">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
 </head>
+
 <body>
+    <h2>Calculadora JavaScript</h2>
     <div class="container">
-        <div class="calculator">
-            <div class="display">
-                <span class="current">0</span>
+        <div class="main-content">
+           
+            <div class="calculator">
+                <div class="display">
+                    <div class="current">0</div>
+                </div>
+                <table class="buttons">
+                    <tr>
+                        <td><button class="clear">C</button></td>
+                        <td><button class="backspace">&#9003;</button></td>
+                        <td><button class="percentage">%</button></td>
+                        <td><button class="operator" data-op="divide">÷</button></td>
+                    </tr>
+                    <tr>                  
+                        <td><button class="number" data-num="7">7</button></td>
+                        <td><button class="number" data-num="8">8</button></td>
+                        <td><button class="number" data-num="9">9</button></td>
+                        <td><button class="operator" data-op="multiply">×</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="number" data-num="4">4</button></td>
+                        <td><button class="number" data-num="5">5</button></td>
+                        <td><button class="number" data-num="6">6</button></td>
+                        <td><button class="operator" data-op="subtract">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="number" data-num="1">1</button></td>
+                        <td><button class="number" data-num="2">2</button></td>
+                        <td><button class="number" data-num="3">3</button></td>
+                        <td><button class="operator" data-op="add">+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="number" data-num="0">0</button></td>
+                        <td><button class="decimal">.</button></td>
+                        <td><button class="decimal">,</button></td>
+                        <td colspan="2"><button class="equals">=</button></td>
+                    </tr>
+                </table>
             </div>
-            <table class="buttons">
-                <tr>
-                    <td><button class="clear">C</button></td>
-                    <td><button class="number" data-num="7">7</button></td>
-                    <td><button class="number" data-num="8">8</button></td>
-                    <td><button class="number" data-num="9">9</button></td>
-                    <td><button class="operator" data-op="divide">÷</button></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><button class="number" data-num="4">4</button></td>
-                    <td><button class="number" data-num="5">5</button></td>
-                    <td><button class="number" data-num="6">6</button></td>
-                    <td><button class="operator" data-op="multiply">×</button></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><button class="number" data-num="1">1</button></td>
-                    <td><button class="number" data-num="2">2</button></td>
-                    <td><button class="number" data-num="3">3</button></td>
-                    <td><button class="operator" data-op="subtract">-</button></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><button class="number" data-num="0">0</button></td>
-                    <td><button class="decimal">.</button></td>
-                    <td><button class="equals">=</button></td>
-                    <td><button class="operator" data-op="add">+</button></td>
-                </tr>
-            </table>
+
+            <div class="history">
+                <div style="display: flex; justify-content: space-between;">
+                    
+                    <h2>Histórico</h2><br>
+                    <p><button class="clear-history clear-history-button">Limpar</button></p><br>
+                    </div>
+                <ul class="history-list"></ul>
+            </div>
+            
         </div>
-        <div class="history">
-            <h2>Histórico</h2>
-            <ul class="history-list"></ul>
-        </div>
+    
+        
     </div>
-    <footer>
-        2023 &copy; Lucas Daniel Correa de Souza, N° 16, Técnico de Informática, CEEP Pedro Boaretto Neto. Cascavel-PR
-    </footer>
+
+    <div class="footer-basic">
+        <footer>
+            <div class="social">
+                <a href="https://www.facebook.com/lucasdcorrea/" target="_blank" ><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/lucasd.correa/" target="_blank" ><i class="fa fa-instagram"></i></a>
+                <a href="https://youtube.com/lucasdcorrea" target="_blank" ><i class="fa fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/in/lucasdcorrea/" target="_blank" ><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.behance.net/lucascorrea26" target="_blank" ><i class="fa fa-behance"></i></a>
+            </div>
+
+            <p class="copyright">Desenvolvido por Lucas dC © 2023</p>
+        </footer>
+    </div>
+ 
+          
     <script src="../EVENTOS DOM/SCRIPT.JS"></script>
+
 </body>
+
 </html>

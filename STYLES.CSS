@@ -4,58 +4,93 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    min-height: 100%;
     background-color: #f0f0f0;
+}
+
+h2 {
+    text-align: center;
+    margin: 2rem;
+    font-size: 30px;
 }
 
 .container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.calculator,
+.history {
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    width: 100%;
 }
 
 .calculator {
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    margin: 1rem;
-    max-width: 300px;
+    margin-bottom: 1rem;
 }
 
 .display {
     background-color: #222;
     color: #fff;
-    padding: 1rem;
+    padding: 2.5rem;
     font-size: 2rem;
     text-align: right;
+    position: relative; 
 }
+
+.current {
+    position: absolute; 
+    white-space: nowrap;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: calc(100% - 2rem);
+    overflow-x: auto;
+
+}
+
+.current::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.current::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+.current::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
 
 .buttons {
-    width: 100%;
-}
-
-.buttons table {
-    width: 100%;
-}
-
-.buttons td {
-    width: 20%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #888;
 }
 
 button {
     border: none;
     background-color: #eee;
     font-size: 1.5rem;
+    margin: 2px;
     padding: 1rem;
     text-align: center;
     transition: background-color 0.3s;
@@ -71,6 +106,10 @@ button:active {
     background-color: #ccc;
 }
 
+.equals {
+    width: 100%;
+}
+
 .operator, .equals {
     background-color: #f2a33c;
     color: #fff;
@@ -84,29 +123,91 @@ button:active {
     background-color: #f29d3c;
 }
 
-.history {
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    margin: 1rem;
-    padding: 1rem;
-    max-width: 300px;
-    width: 100%;
+.backspace {
+    font-size: 1.3rem;
 }
 
 .history h2 {
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin: 1rem;
 }
 
 .history-list {
     list-style: none;
     font-size: 1.25rem;
-    max-height: 200px;
+    max-height: 100px;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 200px;
 }
 
-footer {
-    font-size: 0.9rem;
+.history-list li {
+    padding: 0.5rem 0;
+}
+
+.history-list li::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.history-list li::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+.history-list li::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.clear-history-button {
+    font-size: 13px;
+    width: 90px;
+    height: 50px;
+    margin-left: auto; 
+}
+
+.footer-basic {
+    width: 100%;
+    background-color: #000000;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.social a {
+    display: inline-block;
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
     text-align: center;
-    margin-top: 2rem;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    margin: 0 8px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.social a:hover {
+    color: #919191;
+    opacity: 0.5;
+}
+
+.copyright {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 12px;
+    color: #c1c1c1;
+    margin-bottom: 10px;
 }
